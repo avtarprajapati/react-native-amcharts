@@ -1,0 +1,30 @@
+{
+  "name": "react-native-amcharts",
+  "version": "1.0.0",
+  "description": "Unofficial React-Native wrapper package for using amCharts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avtarprajapati/react-native-amcharts.git"
+  },
+  "keywords": [
+    "react-native",
+    "amcharts",
+    "charts",
+    "react-native-amcharts"
+  ],
+  "author": "Avtar Prajapati",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avtarprajapati/react-native-amcharts/issues"
+  },
+  "homepage": "https://github.com/avtarprajapati/react-native-amcharts#readme",
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-native": "0.72.4",
+    "react-native-webview": "^13.6.0"
+  }
+}
