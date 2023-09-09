@@ -1,4 +1,4 @@
-# ReactNativeAmcharts
+# React-Native amCharts
 
 #### Unofficial React-Native wrapper package for using [AmCharts](https://www.amcharts.com/).
 
@@ -12,14 +12,14 @@
 
 Get package from NPM in your React-native app:
 
-`npm i ReactNativeAmcharts`
+`npm i react-native-amcharts`
 
 ### Basic Usage Example
 
 ```javascript
 import React from 'react';
 import { Stylesheet } from 'react-native';
-import { ReactNativeAmcharts } from 'ReactNativeAmcharts';
+import AMCharts from 'react-native-amcharts';
 
 const config = {
   // Create pie series
@@ -47,30 +47,30 @@ const config = {
       country: 'Ireland',
       litres: 201.1,
     },
-    //   {
-    //     country: "Germany",
-    //     litres: 165.8,
-    //   },
-    //   {
-    //     country: "Australia",
-    //     litres: 139.9,
-    //   },
-    //   {
-    //     country: "Austria",
-    //     litres: 128.3,
-    //   },
-    //   {
-    //     country: "UK",
-    //     litres: 99,
-    //   },
-    //   {
-    //     country: "Belgium",
-    //     litres: 60,
-    //   },
-    //   {
-    //     country: "The Netherlands",
-    //     litres: 50,
-    //   },
+      {
+        country: "Germany",
+        litres: 165.8,
+      },
+      {
+        country: "Australia",
+        litres: 139.9,
+      },
+      {
+        country: "Austria",
+        litres: 128.3,
+      },
+      {
+        country: "UK",
+        litres: 99,
+      },
+      {
+        country: "Belgium",
+        litres: 60,
+      },
+      {
+        country: "The Netherlands",
+        litres: 50,
+      },
   ],
 
   // And, for a good measure, let's add a legend
@@ -80,7 +80,7 @@ const config = {
 const App = () => {
   return (
     <>
-      <ReactNativeAmcharts
+      <AMCharts
         type="pieChart"
         config={config}
         style={styles.chartContainer}
@@ -100,16 +100,16 @@ export default App;
 
 #### Props Defitnition
 
+- **type** Chart type definition from amcharts library
+
+- **config** JSON config for displaying the charts
+
 - **style** Styling chart container
-
-- **chartType** Chart type definition from amcharts library
-
-- **chartConfig** JSON config for displaying the charts
 
 <!-- - **initialScale** Initial Viewport scale for frame
 
 - **maximumScale** Maximum Viewport scale for frame -->
 
-#### References for repository
+#### Repository for reference
 
 - [react-native-amcharts](https://github.com/vikisingh23/react-native-amcharts)
