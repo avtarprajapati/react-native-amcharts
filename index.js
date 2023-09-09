@@ -93,7 +93,7 @@ var fileStyle = StyleSheet.create({
 
 AMCharts.defaultProps = {
   isLoading: false,
-  type: "lineChart",
+  type: "XYChart",
   config: lineChart,
 };
 

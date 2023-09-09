@@ -81,7 +81,7 @@ const App = () => {
   return (
     <>
       <AMCharts
-        type="pieChart"
+        type="PieChart"
         config={config}
         style={styles.chartContainer}
       />
