@@ -14,7 +14,7 @@
     "react-native-amcharts"
   ],
   "author": "Avtar Prajapati",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/avtarprajapati/react-native-amcharts/issues"
   },

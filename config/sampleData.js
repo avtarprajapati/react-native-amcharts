@@ -1,4 +1,8 @@
 export const pieChartData = {
+  responsive: {
+    enabled: true,
+  },
+
   series: [
     {
       type: "PieSeries",
@@ -16,7 +20,7 @@ export const pieChartData = {
       litres: 501.9,
     },
     {
-      country: "Czech Republic",
+      country: "Czechia",
       litres: 301.9,
     },
     {
@@ -50,7 +54,9 @@ export const pieChartData = {
   ],
 
   // And, for a good measure, let's add a legend
-  legend: {},
+  legend: {
+    scrollable: true,
+  },
 };
 
 // bullet points color #2C61F3

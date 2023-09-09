@@ -1,29 +1,13 @@
-import {
-  View,
-  StyleSheet,
-  Dimensions,
-  Text,
-  ActivityIndicator,
-  Platform,
-} from 'react-native';
-import React from 'react';
-import WebView from 'react-native-webview';
-import { lineChart } from './config/sampleData';
+import { View, StyleSheet, Text, ActivityIndicator } from "react-native";
+import React from "react";
+import WebView from "react-native-webview";
+import { lineChart } from "./config/sampleData";
 
-const { width, height } = Dimensions.get('screen');
+// const { width, height } = Dimensions.get("screen");
 
-const amchartConfig = {
-  pieChart: 'am4charts.PieChart',
-  lineChart: 'am4charts.XYChart',
-};
-
-// <!-- 2. All scripts loaded in the package  no CDN dependency for faster performance. -->
-
-const AMCharts = props => {
+const AMCharts = (props) => {
   const width = props?.width || width;
   const height = props?.height || height;
-
-  console.log(`${Platform.OS} ${width} ${height}`);
 
   const chartHtml = `<html>
                             <meta
@@ -32,8 +16,8 @@ const AMCharts = props => {
                             />
                             <style media="screen" type="text/css">
                                 .container {
-                                  width: ${width};
-                                  height: ${height};
+                                  width: 100%;
+                                  height: 100%;
                                   top:0;
                                   left:0;
                                   right:0;
@@ -54,9 +38,9 @@ const AMCharts = props => {
                             <script>
                                 am4core.useTheme(am4themes_animated);
                                 const chart = am4core.createFromConfig(${JSON.stringify(
-                                  props?.config,
+                                  props?.config
                                 )},"chartdiv",
-                                ${amchartConfig[props?.type]}
+                                 am4charts.${props?.type}
                                 );
                                chart.logo.disabled = true;
                             </script>
@@ -82,7 +66,7 @@ const AMCharts = props => {
     <View style={[fileStyle.chartContainer, props?.style]}>
       <WebView
         startInLoadingState={true}
-        style={[fileStyle.full, { width, height }, props?.webViewStyle]}
+        style={[props?.webViewStyle]}
         javaScriptEnabled
         useWebKit
         source={{
@@ -100,23 +84,17 @@ const AMCharts = props => {
 var fileStyle = StyleSheet.create({
   chartContainer: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100%',
-    width: '100%',
-  },
-  full: {
-    flex: 1,
-    // backgroundColor: '#aaaaaa',
+    alignItems: "center",
+    justifyContent: "center",
+    height: "100%",
+    width: "100%",
   },
 });
 
 AMCharts.defaultProps = {
   isLoading: false,
-  type: 'lineChart', // 'pieChart',
-  config: lineChart, // pieChartData,
-  height: 400, // parseInt(height)
-  width: parseInt(width),
+  type: "lineChart",
+  config: lineChart,
 };
 
 export default AMCharts;
