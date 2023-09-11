@@ -1,13 +1,13 @@
-import { View, StyleSheet, Text, ActivityIndicator } from "react-native";
 import React from "react";
+import {
+  View,
+  StyleSheet,
+  Text,
+  ActivityIndicator,
+} from "react-native";
 import WebView from "react-native-webview";
-import { lineChart } from "./config/sampleData";
-
-// const { width, height } = Dimensions.get("screen");
 
 const AMCharts = (props) => {
-  const width = props?.width || width;
-  const height = props?.height || height;
 
   const chartHtml = `<html>
                             <meta
@@ -40,7 +40,7 @@ const AMCharts = (props) => {
                                 const chart = am4core.createFromConfig(${JSON.stringify(
                                   props?.config
                                 )},"chartdiv",
-                                 am4charts.${props?.type}
+                                am4charts.${props?.type}
                                 );
                                chart.logo.disabled = true;
                             </script>
@@ -66,7 +66,7 @@ const AMCharts = (props) => {
     <View style={[fileStyle.chartContainer, props?.style]}>
       <WebView
         startInLoadingState={true}
-        style={[props?.webViewStyle]}
+        style={props?.webViewStyle}
         javaScriptEnabled
         useWebKit
         source={{
@@ -83,18 +83,8 @@ const AMCharts = (props) => {
 
 var fileStyle = StyleSheet.create({
   chartContainer: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    height: "100%",
-    width: "100%",
+    height: 200,
   },
 });
-
-AMCharts.defaultProps = {
-  isLoading: false,
-  type: "XYChart",
-  config: lineChart,
-};
 
 export default AMCharts;
