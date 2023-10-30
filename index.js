@@ -1,14 +1,8 @@
 import React from "react";
-import {
-  View,
-  StyleSheet,
-  Text,
-  ActivityIndicator,
-} from "react-native";
+import { View, StyleSheet, Text, ActivityIndicator } from "react-native";
 import WebView from "react-native-webview";
 
 const AMCharts = (props) => {
-
   const chartHtml = `<html>
                             <meta
                                 name="viewport"
@@ -46,18 +40,18 @@ const AMCharts = (props) => {
                             </script>
                         </html>`;
 
-  if (!props?.config?.data?.length) {
-    return (
-      <View style={fileStyle.chartContainer}>
-        <Text>No Data Available</Text>
-      </View>
-    );
-  }
-
   if (props?.isLoading) {
     return (
       <View style={[fileStyle.chartContainer, props?.style]}>
         <ActivityIndicator />
+      </View>
+    );
+  }
+
+  if (!props?.config?.data?.length) {
+    return (
+      <View style={[fileStyle.chartContainer, fileStyle.center]}>
+        <Text style={fileStyle.textCenter}>No Data Available</Text>
       </View>
     );
   }
@@ -84,6 +78,12 @@ const AMCharts = (props) => {
 var fileStyle = StyleSheet.create({
   chartContainer: {
     height: 200,
+  },
+  textCenter: {
+    textAlign: "center",
+  },
+  center: {
+    justifyContent: "center",
   },
 });
 
