@@ -6,7 +6,9 @@
 
 1. Fully customizable wrapper for AmCharts4 using [JSON-based Config](https://www.amcharts.com/docs/v4/concepts/json-config/#Structure_of_JSON_config).
 
-2. Supported on IOS and Android.
+2. All scripts loaded in the package no CDN dependency for faster performance.
+
+3. Supported on IOS and Android.
 
 ### Installing
 
@@ -111,5 +113,6 @@ export default App;
 - **maximumScale** Maximum Viewport scale for frame -->
 
 #### Repository for reference
+
 
 - [react-native-amcharts](https://github.com/vikisingh23/react-native-amcharts)

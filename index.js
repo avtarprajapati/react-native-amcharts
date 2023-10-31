@@ -22,9 +22,9 @@ const AMCharts = (props) => {
                                 }
                             </style>
                             <head>
-                                <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
-                                <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
-                                <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+                                <script src="./script/v4/core.js"></script>
+                                <script src="./script/v4/charts.js"></script>
+                                <script src="./script/v4/animated.js"></script>
                             </head>
                             <body>
                                 <div id="chartdiv" class="container"></div>
