@@ -31,6 +31,9 @@ const AMCharts = (props) => {
                               <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
                               <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
                               <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+                              <link rel="preconnect" href="https://fonts.googleapis.com">
+                              <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                              <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
                             </head>
                             <body>
                                 <div id="chartdiv" class="container"></div>

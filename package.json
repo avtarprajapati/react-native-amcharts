@@ -1,6 +1,6 @@
 {
   "name": "react-native-amcharts",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Unofficial React-Native wrapper package for using amCharts",
   "main": "index.js",
   "repository": {
